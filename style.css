@@ -4,10 +4,14 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     background: rgba(127, 151, 88, 0.74);
 }
+
+/* Landing Page */
 
 .nav {
     display: flex;
@@ -15,10 +19,10 @@ body {
     align-items: center;
     padding: 15px 60px;
     background: rgb(0, 0, 0);
-    /* position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;  */
+    width: 100%; 
 }
 
 .nav img {
@@ -43,14 +47,14 @@ body {
     color: #7F9758;
 }
 
-.nav-links li:last-child a {
+#btn-cmn  {
     background: #7F9758;
     color: rgb(255, 255, 255);
     padding: 13px 18px;
     border-radius: 5px;
 }
 
-.nav-links li:last-child a:hover {
+#btn-cmn:hover {
     background: #79ac27;
 }
 
@@ -58,7 +62,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 60px;
+    padding: 120px 60px;
     background: #9CAA7A; 
     min-height: 90vh;
 }
@@ -113,11 +117,10 @@ body {
 
 .hero-image img {
     width: 450px;
-
 }
 
 .features {
-    padding: 60px;
+    padding: 200px 0px 270px;
     background: #ddd;
 }
 
@@ -158,6 +161,11 @@ body {
     text-align: center;
 }
 
+.Comment-ca-marche {
+    color: white;
+    padding-bottom: 6%;
+}
+
 .titles{
   text-align: center;
     font-size: 40px;
@@ -177,20 +185,9 @@ body {
     
 }
 
-.ccm {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
 .ccme img {
     width: 70px;
     height: auto;
-}
-
-.Comment-ca-marche {
-    color: white;
-    padding-bottom: 6%;
 }
 
 .Avantages{
@@ -233,7 +230,16 @@ body {
     text-align: center;
     width: auto;
     color: white;
+    margin-left: 5px;
+    transition: 0.3s;
 }
+.ser-btn a:hover{
+    background: white;
+    color: black;
+    
+}
+
+/* Demande De Ticket */
 
 .ticket{
     text-align: center;
@@ -319,6 +325,8 @@ body {
     margin: 0;
 }
 
+/* Tiket Generator */
+
 .Ticket-généré {
     display: flex;
     justify-content: center;
@@ -352,25 +360,8 @@ body {
     border: none; 
 }
 
-
-.tk-generator p {
-    color: #666;
-    margin: 0;
-}
-
-
-.danger-card {
-    background: #c9a646;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 15px;
-    margin-top: 10px;
-}
-
 .danger-card p {
-    color: rgba(217, 217, 217, 1);
+    color: rgb(255, 255, 255);
     margin: 0;
     font-size: 9px;
 }
@@ -389,11 +380,193 @@ body {
     width: 14px;
 }
 
+.tk-generator p {
+    color: #666;
+    margin: 0;
+}
+
+
+.danger-card {
+    background: #c9a646;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    margin-top: 10px;
+}
+
 .notification{
     color: white;
     text-align: center;
     padding-bottom: 3%;
 }
+
+/* Files D'attente */
+
+.queue {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.queue h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.table {
+    width: 100%;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.num {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.status {
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: fit-content;
+    justify-self: center;
+}
+
+.en-cours {
+    background: #f0d000;
+}
+
+.attente {
+    background: #c86522;
+    color: white;
+}
+
+.termine {
+    background: #6bb51f;
+    color: white;
+}
+
+/* Admin Panel */
+
+.dashboard {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.left {
+    flex: 2;
+    background: #ddd;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h3 {
+    margin-bottom: 15px;
+}
+
+.info-cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.carte {
+    flex: 1;
+    background: #eee;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+.carte h2 {
+    margin: 10px 0 0;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.primary {
+    background: black;
+    color: white;
+}
+
+button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+}
+
+.table-box {
+    background: #eee;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 10px;
+    text-align: center;
+}
+
+.fille {
+    flex: 1;
+    background: #ddd;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.queue-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.ticket-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.tks {
+    background: #eee;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.small-btn {
+    background: black;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 8px;
+}
+
 .footer {
   background: rgb(0, 0, 0);
   color: white;
